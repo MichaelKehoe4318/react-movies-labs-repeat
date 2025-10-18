@@ -9,6 +9,7 @@ const AddToWatchListIcon = ({ movie }) => {
   const handleAddToWatchList = (e) => {
     e.preventDefault();
      console.log(`Add to watch list: ${movie.title}`);
+     context.addToMustWatch(movie);
   };
 
   return (
