@@ -58,7 +58,11 @@ const [drawerOpen, setDrawerOpen] = useState(false);
           icon={<StarRate />}
           label={`${movie.vote_average} (${movie.vote_count})`}
         />
-        <Chip label={`Released: ${movie.release_date}`} />
+        <Chip label={`Released: ${movie.release_date}`} 
+        />
+        <Chip label="Production Countries" sx={{...chip}} color="primary" />
+        {movie.production_countries.map((country) => (
+        <Chip key={country.name} label={country.name} sx={{ ...chip }} />))}
       </Paper>
             <Fab
         color="secondary"
