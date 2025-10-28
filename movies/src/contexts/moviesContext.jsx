@@ -43,9 +43,7 @@ const addMustWatch = (movie) => {
 };
 
   const removeFromMustWatch = (movie) => {
-    setFavorites( favorites.filter(
-      (mId) => mId !== movie.id
-    ) )
+    setMustWatch(mustWatch.filter((mId) => mId !== movie.id));
   };
 
    return (
