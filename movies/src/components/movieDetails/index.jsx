@@ -63,6 +63,22 @@ const [drawerOpen, setDrawerOpen] = useState(false);
         <Chip label="Production Countries" sx={{...chip}} color="primary" />
         {movie.production_countries.map((country) => (
         <Chip key={country.name} label={country.name} sx={{ ...chip }} />))}
+        {movie.credits && (
+  <>
+    <Chip label="Directors" sx={{ ...chip }} color="primary" />
+    {movie.credits.crew
+      .filter((c) => c.job === "Director")
+      .map((director) => (
+        <Chip key={`director-${director.id}`} label={director.name} sx={{ ...chip }} />
+      ))}
+
+    <Chip label="Actors" sx={{ ...chip }} color="primary" />
+    {movie.credits.cast.slice(0, 5).map((actor) => (
+      <Chip key={`cast-${actor.id}`} label={`${actor.name} as ${actor.character}`} sx={{ ...chip }} />
+    ))}
+  </>
+)}
+
       </Paper>
             <Fab
         color="secondary"
