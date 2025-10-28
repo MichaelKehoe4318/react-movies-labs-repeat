@@ -37,44 +37,41 @@ const [drawerOpen, setDrawerOpen] = useState(false);
 
       <Paper 
         component="ul" 
-        sx={{...root}}
+        sx={{ backgroundColor: "#2a612aff"}}
       >
-        <li>
-          <Chip label="Genres" sx={{...chip}} color="primary" />
-        </li>
+          <Chip label="Genres" sx={{backgroundColor:"#347e34ff"}} />
         {movie.genres.map((g) => (
-          <li key={g.name}>
-            <Chip label={g.name} sx={{...chip}} />
-          </li>
+            <Chip label={g.name} sx={{backgroundColor:"#347e34ff"}} />
         ))}
       </Paper>
-      <Paper component="ul" sx={{...root}}>
-        <Chip icon={<AccessTimeIcon />} label={`${movie.runtime} min.`} />
-        <Chip
+      <Paper component="ul" sx={{ backgroundColor: "#2a612aff"}}>
+        <Chip  sx={{backgroundColor:"#347e34ff"}} icon={<AccessTimeIcon />} label={`${movie.runtime} min.`} />
+        <Chip sx={{backgroundColor:"#347e34ff"}}
           icon={<MonetizationIcon />}
           label={`${movie.revenue.toLocaleString()}`}
         />
         <Chip
+        sx={{backgroundColor:"#347e34ff"}}
           icon={<StarRate />}
           label={`${movie.vote_average} (${movie.vote_count})`}
         />
-        <Chip label={`Released: ${movie.release_date}`} 
+        <Chip sx={{backgroundColor:"#347e34ff"}} label={`Released: ${movie.release_date}`} 
         />
-        <Chip label="Production Countries" sx={{...chip}} color="primary" />
+        <Chip label="Production Countries" sx={{backgroundColor:"#347e34ff"}} />
         {movie.production_countries.map((country) => (
-        <Chip key={country.name} label={country.name} sx={{ ...chip }} />))}
+        <Chip key={country.name} label={country.name} sx={{backgroundColor:"#347e34ff"}} />))}
         {movie.credits && (
   <>
-    <Chip label="Directors" sx={{ ...chip }} color="primary" />
+    <Chip label="Directors" sx={{backgroundColor:"#347e34ff"}} />
     {movie.credits.crew
       .filter((c) => c.job === "Director")
       .map((director) => (
-        <Chip key={`director-${director.id}`} label={director.name} sx={{ ...chip }} />
+        <Chip key={`director-${director.id}`} label={director.name} sx={{backgroundColor:"#347e34ff"}} />
       ))}
 
-    <Chip label="Actors" sx={{ ...chip }} color="primary" />
+    <Chip label="Actors" sx={{backgroundColor:"#347e34ff"}}/>
     {movie.credits.cast.slice(0, 5).map((actor) => (
-      <Chip key={`cast-${actor.id}`} label={`${actor.name} as ${actor.character}`} sx={{ ...chip }} />
+      <Chip key={`cast-${actor.id}`} label={`${actor.name} as ${actor.character}`} sx={{backgroundColor:"#347e34ff"}} />
     ))}
   </>
 )}

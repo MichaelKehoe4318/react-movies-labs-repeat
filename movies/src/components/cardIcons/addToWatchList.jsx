@@ -14,7 +14,7 @@ const AddToWatchListIcon = ({ movie }) => {
 
   return (
     <IconButton aria-label="add to watchlist" onClick={handleAddToWatchList}>
-      <PlaylistAddIcon color="primary" fontSize="large" />
+      <PlaylistAddIcon sx={{color: "#023316ff"}} fontSize="large" />
     </IconButton>
   );
 };

@@ -30,8 +30,8 @@ export default function MovieReviews({ movie }) {
 
 
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{minWidth: 550}} aria-label="reviews table">
+    <TableContainer component={Paper} sx={{ backgroundColor: "#63a863ff"}}>
+      <Table sx={{minWidth: 550, backgroundColor:"#196319ff"}} aria-label="reviews table">
         <TableHead>
           <TableRow>
             <TableCell >Author</TableCell>

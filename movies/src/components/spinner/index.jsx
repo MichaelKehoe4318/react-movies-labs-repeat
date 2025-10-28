@@ -9,8 +9,8 @@ export default function CircularIndeterminate() {
         '& > * + *': {
           marginLeft: '2em',
         }}}>
-      <CircularProgress />
-      <CircularProgress />
+      <CircularProgress sx={{ backgroundColor: "#153f15ff"}}/>
+      <CircularProgress sx={{ backgroundColor: "#63a863ff"}}/>
     </div>
   );
 }

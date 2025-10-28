@@ -101,7 +101,7 @@ const ReviewForm = ({ movie }) => {
   };
 
   return (
-    <Box component="div" sx={styles.root}>
+    <Box component="div" sx={styles.root} >
       <Typography component="h2" variant="h3">
         Write a review
       </Typography>
